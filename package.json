@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/syrashid/pour_over/issues"
   },
-  "homepage": "https://github.com/syrashid/pour_over#readme"
+  "homepage": "https://github.com/syrashid/pour_over#readme",
+  "devDependencies": {
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  }
 }
