@@ -4,7 +4,7 @@
   "description": "Simple pour over timer application",
   "main": "index.js",
   "scripts": {
-    "dev": "NEED TO FIGURE OUT",
+    "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open"
   },
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/syrashid/pour_over#readme",
   "devDependencies": {
     "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.6.3",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1"
