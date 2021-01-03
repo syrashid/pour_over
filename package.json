@@ -4,7 +4,9 @@
   "description": "Simple pour over timer application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NEED TO FIGURE OUT",
+    "build": "webpack",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -14,7 +16,7 @@
     "Coffee"
   ],
   "author": "Sy Rashid",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/syrashid/pour_over/issues"
   },
