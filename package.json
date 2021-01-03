@@ -1,0 +1,22 @@
+{
+  "name": "pour_over",
+  "version": "1.0.0",
+  "description": "Simple pour over timer application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syrashid/pour_over.git"
+  },
+  "keywords": [
+    "Coffee"
+  ],
+  "author": "Sy Rashid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syrashid/pour_over/issues"
+  },
+  "homepage": "https://github.com/syrashid/pour_over#readme"
+}
