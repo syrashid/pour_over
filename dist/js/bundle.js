@@ -1,1 +1,1 @@
-console.log("Sweet Tits");
+(()=>{"use strict";function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}(new(function(){function n(){!function(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}(this,n)}var t,r;return t=n,(r=[{key:"start",value:function(){console.log("Hello World")}}])&&e(t.prototype,r),n}())).start()})();
