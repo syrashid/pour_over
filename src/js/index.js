@@ -1,5 +1,4 @@
-import sum from './functions/sum';
+import StepController from './step_controller';
 
-console.log("Sweet Tits")
+new StepController().start();
 
-console.log(sum(1,2));
