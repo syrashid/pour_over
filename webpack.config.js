@@ -13,10 +13,11 @@ module.exports = {
     contentBase: './dist',
   },
   plugins: [
-  new HtmlWebpackPlugin({
-    filename: "index.html",
-    template: "./src/index.html",
-  }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./src/index.html",
+    }),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
@@ -31,12 +32,12 @@ module.exports = {
         }
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
         ],
       },
     ]
