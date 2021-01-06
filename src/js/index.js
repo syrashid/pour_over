@@ -1,5 +1,4 @@
 import StepController from './step_controller';
 
-const test = new StepController();
+new StepController().start();
 
-test.helloWorld();

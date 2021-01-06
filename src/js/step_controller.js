@@ -8,7 +8,7 @@ export default class StepController {
     constructor() {
     }
 
-    helloWorld() {
+    start() {
       console.log("Hello World")
     }
 }
