@@ -1,5 +1,5 @@
-import sum from './functions/sum';
+import StepController from './step_controller';
 
-console.log("Sweet Tits")
+const test = new StepController();
 
-console.log(sum(1,2));
+test.helloWorld();
