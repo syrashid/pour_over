@@ -1,11 +1,11 @@
 export default class Step {
-  constructor(text, duration, prev, next, animation_url, active) {
+  constructor(text, duration, animation_url) {
     this._text = text;
     this._duration = duration;
-    this._prev = prev;
-    this._next = next;
+    this._prev = null;
+    this._next = null;
     this._animation_url = animation_url;
-    this._active = active;
+    this._active = false;
   }
 
   get text() {
@@ -20,8 +20,16 @@ export default class Step {
     return this._prev;
   }
 
+  set prevStep(prev) {
+    this._prev = prev;
+  }
+
   get nextStep() {
     return this._next;
+  }
+
+  set nextStep(next) {
+    this._next = next;
   }
 
   get animation() {
@@ -40,3 +48,5 @@ export default class Step {
     this._active = false;
   }
 }
+
+const test = new Step("Sweet Tits", 10, 'www.google.com')
