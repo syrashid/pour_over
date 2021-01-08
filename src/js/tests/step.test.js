@@ -27,11 +27,21 @@ test('setter methods for Step class', () => {
   prev = current = next = null;
 });
 
-test('activate and terminate methods for Step class', () => {
+test('activate method for Step class', () => {
   let step = new Step("Sample Text for a Step", 10, "www.sample_url.com");
 
   step.activate();
   expect(step.isActive).toBeTruthy();
+
+  step = null;
+})
+
+test('terminate method for Step class', () => {
+  let step = new Step("Sample Text for a Step", 10, "www.sample_url.com");
+
+  step.activate();
+  step.terminate();
+  expect(step.isActive).toBeFalsy();
 
   step = null;
 })
