@@ -49,4 +49,4 @@ export default class Step {
   }
 }
 
-const test = new Step("Sweet Tits", 10, 'www.google.com')
+
