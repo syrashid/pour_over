@@ -16,19 +16,19 @@ export default class Step {
     return this._duration;
   }
 
-  get prevStep() {
+  get prev() {
     return this._prev;
   }
 
-  set prevStep(prev) {
+  set prev(prev) {
     this._prev = prev;
   }
 
-  get nextStep() {
+  get next() {
     return this._next;
   }
 
-  set nextStep(next) {
+  set next(next) {
     this._next = next;
   }
 
