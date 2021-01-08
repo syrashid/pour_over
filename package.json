@@ -4,7 +4,7 @@
   "description": "Simple pour over timer application",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack",
     "start": "webpack serve --open"
   },
