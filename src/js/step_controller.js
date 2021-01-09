@@ -3,6 +3,7 @@ import Step from './models/Step';
 
 // View Imports
 import * as formView from './views/formView';
+import * as commandView from './views/commandView';
 
 export default class StepController {
   constructor() {
@@ -37,6 +38,6 @@ export default class StepController {
   }
 
   start() {
-    console.log("Hello World")
+    commandView.updateDisplay(this._head);
   }
 }
