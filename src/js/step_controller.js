@@ -1,13 +1,13 @@
 // Model Imports
 import Step from './models/Step';
 
-// View Imports
-import * as formView from './views/formView';
-import * as commandView from './views/commandView';
+// View Import
+import * as stepView from './views/stepView';
 
 export default class StepController {
   constructor() {
     this._head = null;
+    this._active = null;
     this._tail = null;
     this._length = 0;
   }
@@ -38,6 +38,18 @@ export default class StepController {
   }
 
   start() {
-    commandView.updateDisplay(this._head);
+    stepView.updateDisplay(this._head);
+    this._active = this._head;
+  }
+
+  nextStep() {
+    // Add some guards for beginning and end of sequence
+    this._active = this._active.next;
+    stepView.updateDisplay(this._active);
+  }
+
+  prevStep() {
+    this._active = this._active.prev;
+    stepView.updateDisplay(this._active);
   }
 }
