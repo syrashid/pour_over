@@ -20,17 +20,17 @@ export default class StepController {
   }
 
   get tail() {
-    return this._head;
+    return this._tail;
   }
 
   push(step) {
-    if (!this.head) {
-      this.head = step;
-      this.tail = step;
+    if (!this._head) {
+      this._head = step;
+      this._tail = step;
     } else {
-      this.tail.next = step;
-      step.prev = this.tail;
-      this.tail = step;
+      this._tail.next = step;
+      step.prev = this._tail;
+      this._tail = step;
     }
     this._length++;
     return this;
