@@ -1,11 +1,13 @@
+// External Imports
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 // Internal Imports
 @import "./styles/site-style";
 @import "./pages/site-pages";
 @import "./components/site-components";
 
-// External Imports
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
 
 
