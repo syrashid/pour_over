@@ -2,7 +2,7 @@
 import "../css/index.scss";
 
 // DOM Element Import
-import { elements } from './views/base';
+import { elements } from './views/stepView';
 
 // Class Imports
 import StepController from './step_controller';
