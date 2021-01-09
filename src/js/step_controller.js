@@ -15,6 +15,14 @@ export default class StepController {
     return this._length;
   }
 
+  get head() {
+    return this._head;
+  }
+
+  get tail() {
+    return this._head;
+  }
+
   push(step) {
     if (!this.head) {
       this.head = step;
@@ -24,7 +32,7 @@ export default class StepController {
       step.prev = this.tail;
       this.tail = step;
     }
-    this.length++;
+    this._length++;
     return this;
   }
 
