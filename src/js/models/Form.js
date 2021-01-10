@@ -8,7 +8,7 @@ export default class Form extends Step {
 
   formHTML() {
     return `
-      <form action="https://www.yelp.com/search" method="get" target="_blank">
+      <form onsubmit="return false">
         I'm looking for a
 
         <span id="atmosphere" class="input-container">
