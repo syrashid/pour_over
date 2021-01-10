@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --detectOpenHandles",
-    "build": "webpack",
+    "build": "webpack  && cp -r src/assets dist",
     "start": "webpack serve --open",
     "server": "webpack serve"
   },
