@@ -15,6 +15,7 @@ export const elements = {
 
 
 export const updateDisplay = command => {
+
   elements.text.innerHTML = command.text;
   elements.animation.innerHTML = command.animation;
 
@@ -24,20 +25,24 @@ export const updateDisplay = command => {
   }
 
   if (command instanceof Timer) {
+
     clearInterval;
     _timer(command.duration);
   }
 
   function _timer(seconds) {
+    let countdown;
     const now = Date.now();
     const then = now + seconds * 1000;
 
     _displayTimeLeft(Math.round((then - now)/1000));
-
+    clearInterval(countdown);
     countdown = setInterval(() => {
       const secondsLeft = Math.round((then - Date.now()) / 1000);
       if (secondsLeft < 0) {
+        // add an audio sound for this
         clearInterval(countdown);
+        elements.next.click();
         return;
       }
 
@@ -52,7 +57,7 @@ export const updateDisplay = command => {
       remainderSeconds < 10 ? "0" : ""
     }${remainderSeconds}`;
 
-    document.title = display;
+    document.title = ` ❤️ ${display} ❤️ `;
     elements.timer.textContent = display;
   }
 }
