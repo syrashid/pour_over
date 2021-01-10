@@ -2,7 +2,7 @@
 import Step from './Step';
 
 export default class Timer extends Step {
-  constructor() {
-
+  constructor(text, duration, animation_url) {
+    super(text, duration, animation_url);
   }
 }
