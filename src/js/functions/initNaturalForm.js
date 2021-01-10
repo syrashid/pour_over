@@ -1,4 +1,4 @@
-const initNaturalLanguageForm = () => {
+const initNaturalLanguageForm = (formObj) => {
   // show and hide styled inputs, update natural language statement
   $(".input-container").click(function () {
     var target = $(this);
@@ -59,9 +59,12 @@ const initNaturalLanguageForm = () => {
     var siblingOptions = $(this).parent().find(".newOption");
     var newValue = $(this).attr("data-value");
     var selectOption = $(this).parent().parent().find("select option");
+    var category = $(this).parent().parent().parent().parent()[0].id;
     // style selected option
     siblingOptions.removeClass("selected");
     OptionInUse.addClass("selected");
+    // update form ojbect
+    eval(`formObj.${category} = '${newValue}'`);
     // update the actual input
     selectOption.each(function () {
       var optionValue = $(this).attr("value");

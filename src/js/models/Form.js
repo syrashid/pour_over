@@ -37,10 +37,10 @@ export default class Form extends Step {
     return `
       <form onsubmit="return false">
         Let's make
-        <span id="number" class="input-container">
-          <span class="placeholder"> ___ </span>
+        <span id="cups" class="input-container">
+          <span class="placeholder"> ??? </span>
           <span class="input selectbox">
-            <select class="fancy-select hidden" name="find_desc">
+            <select class="fancy-select hidden" name="cups">
               <option value="one">one</option>
               <option value="two">two</option>
             </select>
@@ -58,7 +58,7 @@ export default class Form extends Step {
           </span>
         </span>
         roast, with a
-        <span id="ambience" class="input-container">
+        <span id="soundtrack" class="input-container">
           <span class="placeholder"> ??? </span>
           <span class="input selectbox">
             <select name="soundtrack" class="fancy-select hidden">
