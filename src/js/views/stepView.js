@@ -16,12 +16,43 @@ export const elements = {
 export const updateDisplay = command => {
   elements.text.innerHTML = command.text;
   elements.animation.innerHTML = command.animation;
+
   if (command instanceof Form) {
     elements.animation.innerHTML = command.formHTML();
     initNaturalLanguageForm(command);
   }
+
   if (command instanceof Timer) {
-    command.startTimer();
+    clearInterval;
+    _timer(command.duration);
+  }
+
+  function _timer(seconds) {
+    const now = Date.now();
+    const then = now + seconds * 1000;
+
+    _displayTimeLeft(Math.round((then - now)/1000));
+    clearInterval(countdown);
+    countdown = setInterval(() => {
+      const secondsLeft = Math.round((then - Date.now()) / 1000);
+      if (secondsLeft < 0) {
+        clearInterval(countdown);
+        return;
+      }
+
+    _displayTimeLeft(secondsLeft);
+    }, 1000);
+  }
+
+  function _displayTimeLeft(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainderSeconds = seconds % 60;
+    const display = `${minutes}:${
+      remainderSeconds < 10 ? "0" : ""
+    }${remainderSeconds}`;
+
+    document.title = display;
+    timer.textContent = display;
   }
 }
 
