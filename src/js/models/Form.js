@@ -9,38 +9,40 @@ export default class Form extends Step {
   formHTML() {
     return `
       <form onsubmit="return false">
-        I'm looking for a
-
-        <span id="atmosphere" class="input-container">
-          <span class="placeholder">fancy</span>
+        Let's make
+        <span id="number" class="input-container">
+          <span class="placeholder"> ___ </span>
           <span class="input selectbox">
             <select class="fancy-select hidden" name="find_desc">
-              <option value="fancy">fancy</option>
-              <option value="hip">hip</option>
-              <option value="romantic">romantic</option>
-              <option value="casual">casual</option>
+              <option value="one">one</option>
+              <option value="two">two</option>
             </select>
           </span>
         </span>
-        <span id="cuisine" class="input-container">
-          <span class="placeholder">chinese</span>
+        cup(s) of coffee, we'll use a
+        <span id="roast" class="input-container">
+          <span class="placeholder"> ??? </span>
           <span class="input selectbox">
-            <select name="cflt" class="fancy-select hidden">
-              <option value="chinese">chinese</option>
-              <option value="italian">italian</option>
-              <option value="french">french</option>
-              <option value="german">german</option>
+            <select name="roast" class="fancy-select hidden">
+              <option value="light">light</option>
+              <option value="medium">medium</option>
+              <option value="dark">dark</option>
             </select>
           </span>
         </span>
-        restaurant in
-        <span id="location" class="input-container no-overflow">
-          <span class="input text">
-            <input type="text" id="location-input" name="find_loc" value="New York"/>
+        roast, with a
+        <span id="ambience" class="input-container">
+          <span class="placeholder"> ??? </span>
+          <span class="input selectbox">
+            <select name="roast" class="fancy-select hidden">
+              <option value="lofi">light</option>
+              <option value="acoustic">medium</option>
+              <option value="folk">folk</option>
+              <option value="jazz">jazz</option>
+            </select>
           </span>
-          <span class="placeholder">New York</span>.
         </span>
-        <button type="submit">Find a Restaurant</button>
+        soundtrack.
       </form>
     `;
   }
