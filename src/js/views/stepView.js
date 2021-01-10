@@ -17,7 +17,7 @@ export const updateDisplay = command => {
   elements.text.innerHTML = command.text;
   if (command instanceof Form) {
     elements.animation.innerHTML = command.formHTML();
-    initNaturalLanguageForm();
+    initNaturalLanguageForm(command);
   }
 }
 

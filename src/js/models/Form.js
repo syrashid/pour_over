@@ -4,6 +4,33 @@ import Step from './Step';
 export default class Form extends Step {
   constructor(text, duration, animation_url) {
     super(text, duration, animation_url);
+    this._cups = null;
+    this._roast = null;
+    this._soundtrack = null;
+  }
+
+  get cups() {
+    return this._cups;
+  }
+
+  set cups(cups) {
+    this._cups = cups;
+  }
+
+  get roast() {
+    return this._roast;
+  }
+
+  set roast(roast) {
+    this._roast = roast;
+  }
+
+  get soundtrack() {
+    return this._soundtrack;
+  }
+
+  set soundtrack(soundtrack) {
+    this._soundtrack = soundtrack;
   }
 
   formHTML() {
@@ -19,7 +46,7 @@ export default class Form extends Step {
             </select>
           </span>
         </span>
-        cup(s) of coffee, we'll use a
+        cup(s) of coffee, using a
         <span id="roast" class="input-container">
           <span class="placeholder"> ??? </span>
           <span class="input selectbox">
@@ -34,7 +61,7 @@ export default class Form extends Step {
         <span id="ambience" class="input-container">
           <span class="placeholder"> ??? </span>
           <span class="input selectbox">
-            <select name="roast" class="fancy-select hidden">
+            <select name="soundtrack" class="fancy-select hidden">
               <option value="lofi">light</option>
               <option value="acoustic">medium</option>
               <option value="folk">folk</option>
