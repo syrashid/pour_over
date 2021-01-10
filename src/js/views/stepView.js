@@ -3,6 +3,7 @@ import { initNaturalLanguageForm } from "../functions/initNaturalForm";
 
 // Model Imports
 import Form from '../models/Form';
+import Timer from "../models/Timer";
 
 export const elements = {
   text: document.querySelector('.step__text'),
@@ -32,7 +33,7 @@ export const updateDisplay = command => {
     const then = now + seconds * 1000;
 
     _displayTimeLeft(Math.round((then - now)/1000));
-    clearInterval(countdown);
+
     countdown = setInterval(() => {
       const secondsLeft = Math.round((then - Date.now()) / 1000);
       if (secondsLeft < 0) {
@@ -52,7 +53,7 @@ export const updateDisplay = command => {
     }${remainderSeconds}`;
 
     document.title = display;
-    timer.textContent = display;
+    elements.timer.textContent = display;
   }
 }
 
