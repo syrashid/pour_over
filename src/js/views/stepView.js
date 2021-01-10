@@ -27,15 +27,15 @@ export const updateDisplay = command => {
   if (command instanceof Timer) {
 
     clearInterval;
-    _timer(command.duration);
+    timer(command.duration);
   }
 
-  function _timer(seconds) {
+  function timer(seconds) {
     let countdown;
     const now = Date.now();
     const then = now + seconds * 1000;
 
-    _displayTimeLeft(Math.round((then - now)/1000));
+    displayTimeLeft(Math.round((then - now)/1000));
     clearInterval(countdown);
     countdown = setInterval(() => {
       const secondsLeft = Math.round((then - Date.now()) / 1000);
@@ -46,11 +46,11 @@ export const updateDisplay = command => {
         return;
       }
 
-    _displayTimeLeft(secondsLeft);
+    displayTimeLeft(secondsLeft);
     }, 1000);
   }
 
-  function _displayTimeLeft(seconds) {
+  function displayTimeLeft(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainderSeconds = seconds % 60;
     const display = `${minutes}:${
