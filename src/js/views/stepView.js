@@ -68,4 +68,7 @@ export const enablePrev = () => {
   elements.prevDisabled.classList.add('hidden');
 }
 
-
+export const disablePrev = () => {
+  elements.prev.classList.add("hidden");
+  elements.prevDisabled.classList.remove("hidden");
+};
