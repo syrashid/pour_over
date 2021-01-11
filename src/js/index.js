@@ -21,7 +21,7 @@ import Timer from "./models/Timer";
     new Command(
       "Good morning love, let's make coffee together!",
       10,
-      "Animation Placeholder"
+      `<object data="./assets/morning.svg" type="image/svg+xml"></object>`
     )
   );
 
