@@ -64,11 +64,16 @@ export const updateDisplay = command => {
 }
 
 export const enablePrev = () => {
-  elements.prev.classList.remove('hidden');
-  elements.prevDisabled.classList.add('hidden');
-}
+  elements.prev.classList.remove("hidden");
+  elements.prevDisabled.classList.add("hidden");
+};
 
 export const disablePrev = () => {
   elements.prev.classList.add("hidden");
   elements.prevDisabled.classList.remove("hidden");
+};
+
+export const enableNext = () => {
+  elements.next.classList.remove("hidden");
+  elements.nextDisabled.classList.add("hidden");
 };
