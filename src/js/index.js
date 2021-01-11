@@ -46,13 +46,13 @@ import Timer from "./models/Timer";
   stepCtrl.push(
     new Timer(
       "Now let's pour continuously to steep",
-      150,
+      120,
       "Animation Placeholder"
     )
   );
 
   stepCtrl.push(
-    new Command("And for the last bit let's give it a slight stir", 0, "Animation Placeholder")
+    new Timer("And for the last bit let's give it a slight stir and wait", 30, "Animation Placeholder")
   );
 
   stepCtrl.push(
