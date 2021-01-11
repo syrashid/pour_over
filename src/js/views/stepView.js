@@ -16,8 +16,9 @@ export const elements = {
 };
 
 
-export const updateDisplay = command => {
+export const updateDisplay = (command, intervals = null) => {
   elements.text.innerHTML = command.text;
+  elements.timer.innerHTML = '';
   elements.animation.innerHTML = command.animation;
 
   if (command instanceof Form) {
@@ -26,8 +27,6 @@ export const updateDisplay = command => {
   }
 
   if (command instanceof Timer) {
-
-    clearInterval;
     timer(command.duration);
   }
 
@@ -49,6 +48,8 @@ export const updateDisplay = command => {
 
     displayTimeLeft(secondsLeft);
     }, 1000);
+
+    intervals.push(countdown);
   }
 
   function displayTimeLeft(seconds) {
