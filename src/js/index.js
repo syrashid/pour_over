@@ -38,7 +38,7 @@ import Timer from "./models/Timer";
   stepCtrl.push(
     new Timer(
       "Let's pour a little water for the bloom",
-      5,
+      35,
       "Animation Placeholder"
     )
   );
@@ -46,7 +46,7 @@ import Timer from "./models/Timer";
   stepCtrl.push(
     new Timer(
       "Now let's pour continuously to steep",
-      10,
+      150,
       "Animation Placeholder"
     )
   );

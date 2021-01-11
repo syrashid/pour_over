@@ -15,6 +15,9 @@ export default class Form extends Step {
 
   set cups(cups) {
     this._cups = cups;
+    if (cups === 'two') {
+      this._next._next._next._next.addTime(60);
+    }
   }
 
   get roast() {
@@ -23,6 +26,7 @@ export default class Form extends Step {
 
   set roast(roast) {
     this._roast = roast;
+
   }
 
   get soundtrack() {
