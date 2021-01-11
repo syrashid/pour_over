@@ -20,10 +20,16 @@
           Placeholder text
         </div>
         <div class="flex">
-          <button class="step__btn--prev bg-blue-300 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-l">
+          <button class="step__btn--prev-disabled bg-blue-500 text-white font-bold py-2 px-4 rounded-l opacity-50 cursor-not-allowed">
+            Prev
+          </button>
+          <button class="step__btn--prev bg-blue-300 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-l hidden">
             Prev
           </button>
           <button class="step__btn--next bg-blue-300 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-r">
+            Next
+          </button>
+          <button class="step__btn--next-disabled bg-blue-500 text-white font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed hidden">
             Next
           </button>
         </div>
@@ -33,6 +39,6 @@
 
   <!-- Add this music player if possible -->
   <!-- https://codepen.io/himalayasingh/pen/QZKqOX -->
-
+  <script src="https://kit.fontawesome.com/721627a3c7.js" crossorigin="anonymous"></script>
 </body>
 </html>

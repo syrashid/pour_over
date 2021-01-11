@@ -6,17 +6,19 @@ import Form from '../models/Form';
 import Timer from "../models/Timer";
 
 export const elements = {
-  text: document.querySelector('.step__text'),
-  timer: document.querySelector('.step__timer'),
-  next: document.querySelector('.step__btn--next'),
-  prev: document.querySelector('.step__btn--prev'),
-  animation: document.querySelector('.step__animation')
+  text: document.querySelector(".step__text"),
+  timer: document.querySelector(".step__timer"),
+  next: document.querySelector(".step__btn--next"),
+  nextDisabled: document.querySelector(".step__btn--next-disabled"),
+  prev: document.querySelector(".step__btn--prev"),
+  prevDisabled: document.querySelector(".step__btn--prev-disabled"),
+  animation: document.querySelector(".step__animation"),
 };
 
 
-export const updateDisplay = command => {
-
+export const updateDisplay = (command, intervals = null) => {
   elements.text.innerHTML = command.text;
+  elements.timer.innerHTML = '';
   elements.animation.innerHTML = command.animation;
 
   if (command instanceof Form) {
@@ -25,8 +27,6 @@ export const updateDisplay = command => {
   }
 
   if (command instanceof Timer) {
-
-    clearInterval;
     timer(command.duration);
   }
 
@@ -48,6 +48,8 @@ export const updateDisplay = command => {
 
     displayTimeLeft(secondsLeft);
     }, 1000);
+
+    intervals.push(countdown);
   }
 
   function displayTimeLeft(seconds) {
@@ -62,4 +64,22 @@ export const updateDisplay = command => {
   }
 }
 
+export const enablePrev = () => {
+  elements.prev.classList.remove("hidden");
+  elements.prevDisabled.classList.add("hidden");
+};
 
+export const disablePrev = () => {
+  elements.prev.classList.add("hidden");
+  elements.prevDisabled.classList.remove("hidden");
+};
+
+export const enableNext = () => {
+  elements.next.classList.remove("hidden");
+  elements.nextDisabled.classList.add("hidden");
+};
+
+export const disableNext = () => {
+  elements.next.classList.add("hidden");
+  elements.nextDisabled.classList.remove("hidden");
+};

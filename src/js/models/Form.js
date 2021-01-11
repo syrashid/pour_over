@@ -15,6 +15,9 @@ export default class Form extends Step {
 
   set cups(cups) {
     this._cups = cups;
+    if (cups === 'two') {
+      this._next._next._next._next.addTime(60);
+    }
   }
 
   get roast() {
@@ -23,6 +26,11 @@ export default class Form extends Step {
 
   set roast(roast) {
     this._roast = roast;
+    if (roast === "medium") {
+      this._next._next._next._next.addTime(30);
+    } else if (roast === "light") {
+      this._next._next._next._next.addTime(60);
+    }
   }
 
   get soundtrack() {
@@ -37,42 +45,42 @@ export default class Form extends Step {
 
   formHTML() {
     return `
-      <form onsubmit="return false">
-        Let's make
-        <span id="cups" class="input-container">
-          <span class="placeholder"> ??? </span>
-          <span class="input selectbox">
-            <select class="fancy-select hidden" name="cups">
-              <option value="one">one</option>
-              <option value="two">two</option>
-            </select>
-          </span>
-        </span>
-        cup(s) of coffee, using a
-        <span id="roast" class="input-container">
-          <span class="placeholder"> ??? </span>
-          <span class="input selectbox">
-            <select name="roast" class="fancy-select hidden">
-              <option value="light">light</option>
-              <option value="medium">medium</option>
-              <option value="dark">dark</option>
-            </select>
-          </span>
-        </span>
-        roast, with a
-        <span id="soundtrack" class="input-container">
-          <span class="placeholder"> ??? </span>
-          <span class="input selectbox">
-            <select name="soundtrack" class="fancy-select hidden">
-              <option value="lofi">lofi</option>
-              <option value="acoustic">acoustic</option>
-              <option value="folk">folk</option>
-              <option value="jazz">jazz</option>
-            </select>
-          </span>
-        </span>
-        soundtrack.
-      </form>
+    <form onsubmit="return false">
+    Let's make
+    <span id="cups" class="input-container">
+    <span class="placeholder"> ??? </span>
+    <span class="input selectbox">
+    <select class="fancy-select hidden" name="cups">
+    <option value="one">one</option>
+    <option value="two">two</option>
+    </select>
+    </span>
+    </span>
+    cup(s) of coffee, using a
+    <span id="roast" class="input-container">
+    <span class="placeholder"> ??? </span>
+    <span class="input selectbox">
+    <select name="roast" class="fancy-select hidden">
+    <option value="light">light</option>
+    <option value="medium">medium</option>
+    <option value="dark">dark</option>
+    </select>
+    </span>
+    </span>
+    roast, with a
+    <span id="soundtrack" class="input-container">
+    <span class="placeholder"> ??? </span>
+    <span class="input selectbox">
+    <select name="soundtrack" class="fancy-select hidden">
+    <option value="lofi">lofi</option>
+    <option value="acoustic">acoustic</option>
+    <option value="folk">folk</option>
+    <option value="jazz">jazz</option>
+    </select>
+    </span>
+    </span>
+    soundtrack.
+    </form>
     `;
   }
 }

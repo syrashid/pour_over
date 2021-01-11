@@ -12,6 +12,7 @@ export default class StepController {
     this._active = null;
     this._tail = null;
     this._length = 0;
+    this._timerIntervals = [];
   }
 
   get length() {
@@ -45,13 +46,22 @@ export default class StepController {
   }
 
   nextStep() {
-    // Add some guards for beginning and end of sequence
+    if (this._active === this._head) stepView.enablePrev();
     this._active = this._active.next;
-    stepView.updateDisplay(this._active);
+    if (this._active === this._tail) stepView.disableNext();
+    this._clearIntervals();
+    stepView.updateDisplay(this._active, this._timerIntervals);
   }
 
   prevStep() {
+    if (this._active === this._tail) stepView.enableNext();
     this._active = this._active.prev;
-    stepView.updateDisplay(this._active);
+    if (this._active === this._head) stepView.disablePrev();
+    this._clearIntervals();
+    stepView.updateDisplay(this._active, this._timerIntervals);
+  }
+
+  _clearIntervals() {
+    this._timerIntervals.forEach(clearInterval);
   }
 }
