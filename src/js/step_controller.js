@@ -45,13 +45,16 @@ export default class StepController {
   }
 
   nextStep() {
-    // Add some guards for beginning and end of sequence
+    if (this._active === this._head) stepView.enablePrev();
     this._active = this._active.next;
+    if (this._active === this._tail) stepView.disableNext();
     stepView.updateDisplay(this._active);
   }
 
   prevStep() {
+    if (this._active === this._tail) stepView.enableNext();
     this._active = this._active.prev;
+    if (this._active === this._head) stepView.disablePrev();
     stepView.updateDisplay(this._active);
   }
 }

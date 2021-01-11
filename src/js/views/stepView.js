@@ -6,16 +6,17 @@ import Form from '../models/Form';
 import Timer from "../models/Timer";
 
 export const elements = {
-  text: document.querySelector('.step__text'),
-  timer: document.querySelector('.step__timer'),
-  next: document.querySelector('.step__btn--next'),
-  prev: document.querySelector('.step__btn--prev'),
-  animation: document.querySelector('.step__animation')
+  text: document.querySelector(".step__text"),
+  timer: document.querySelector(".step__timer"),
+  next: document.querySelector(".step__btn--next"),
+  nextDisabled: document.querySelector(".step__btn--next-disabled"),
+  prev: document.querySelector(".step__btn--prev"),
+  prevDisabled: document.querySelector(".step__btn--prev-disabled"),
+  animation: document.querySelector(".step__animation"),
 };
 
 
 export const updateDisplay = command => {
-
   elements.text.innerHTML = command.text;
   elements.animation.innerHTML = command.animation;
 
@@ -60,6 +61,11 @@ export const updateDisplay = command => {
     document.title = ` ❤️ ${display} ❤️ `;
     elements.timer.textContent = display;
   }
+}
+
+export const enablePrev = () => {
+  elements.prev.classList.remove('hidden');
+  elements.prevDisabled.classList.add('hidden');
 }
 
 
