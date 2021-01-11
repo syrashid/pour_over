@@ -28,7 +28,11 @@ import Timer from "./models/Timer";
   stepCtrl.push(new Form("How should we do this?", 0, null));
 
   stepCtrl.push(
-    new Command("Let's get the water boiling", 0, "Animation Placeholder")
+    new Command(
+      "Let's get the water boiling",
+      0,
+      `<object data="./assets/boil.svg" type="image/svg+xml" class="animation-boil"></object>`
+    )
   );
 
   stepCtrl.push(
