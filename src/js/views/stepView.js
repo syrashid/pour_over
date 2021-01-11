@@ -77,3 +77,8 @@ export const enableNext = () => {
   elements.next.classList.remove("hidden");
   elements.nextDisabled.classList.add("hidden");
 };
+
+export const disableNext = () => {
+  elements.next.classList.add("hidden");
+  elements.nextDisabled.classList.remove("hidden");
+};
