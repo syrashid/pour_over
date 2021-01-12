@@ -55,7 +55,7 @@ import Timer from "./models/Timer";
     new Timer(
       "Now let's pour continuously to steep",
       120,
-      "Animation Placeholder"
+      `<object data="./assets/pour.svg" type="image/svg+xml" class="animation-pour"></object>`
     )
   );
 
