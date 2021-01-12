@@ -4,6 +4,9 @@ import "../css/index.scss";
 // DOM Element Import
 import { elements } from "./views/stepView";
 
+// Function Imports
+import { initMusicPlayer } from "./functions/initMusicPlayer";
+
 // Class Imports
 import StepController from "./step_controller";
 import Step from "./models/Step";
@@ -25,7 +28,8 @@ import Timer from "./models/Timer";
     )
   );
 
-  stepCtrl.push(new Form("How should we do this?", 0, null));
+  const formObj = new Form("How should we do this?", 0, null);
+  stepCtrl.push(formObj);
 
   stepCtrl.push(
     new Command(
@@ -76,4 +80,5 @@ import Timer from "./models/Timer";
   );
 
   stepCtrl.start();
+  initMusicPlayer(formObj);
 }

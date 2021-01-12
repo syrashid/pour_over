@@ -7,6 +7,7 @@ export default class Form extends Step {
     this._cups = null;
     this._roast = null;
     this._soundtrack = null;
+    this._tracks = ['lofi', 'acoustic', 'folk', 'jazz']
   }
 
   get cups() {
@@ -38,11 +39,13 @@ export default class Form extends Step {
   }
 
   set soundtrack(soundtrack) {
-    if (this._soundtrack instanceof Audio) this._soundtrack.pause();
-    this._soundtrack = new Audio(`../../assets/${soundtrack}.mp3`);
-    this._soundtrack.play();
+    // In an ideal world there should be some api between the form and the music player
+    this._soundtrack = soundtrack;
   }
 
+  get tracks() {
+    return this._tracks;
+  }
   formHTML() {
     return `
     <form onsubmit="return false" class="px-4">
