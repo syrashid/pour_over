@@ -4,6 +4,9 @@ import "../css/index.scss";
 // DOM Element Import
 import { elements } from "./views/stepView";
 
+// Function Imports
+import { initMusicPlayer } from "./functions/initMusicPlayer";
+
 // Class Imports
 import StepController from "./step_controller";
 import Step from "./models/Step";
@@ -76,4 +79,5 @@ import Timer from "./models/Timer";
   );
 
   stepCtrl.start();
+  initMusicPlayer();
 }

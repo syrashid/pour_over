@@ -1,4 +1,5 @@
-$(function () {
+const initMusicPlayer = () => {
+
   var playerTrack = $("#player-track"),
     bgArtwork = $("#bg-artwork"),
     bgArtworkUrl,
@@ -53,10 +54,11 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = -1;
+    currIndex = -1,
+    audio;
 
-  function playPause() {
-    setTimeout(function () {
+  const playPause = () => {
+    setTimeout(() => {
       if (audio.paused) {
         playerTrack.addClass("active");
         albumArt.addClass("active");
@@ -74,7 +76,7 @@ $(function () {
     }, 300);
   }
 
-  function showHover(event) {
+  const showHover = (event) => {
     seekBarPos = sArea.offset();
     seekT = event.clientX - seekBarPos.left;
     seekLoc = audio.duration * (seekT / sArea.outerWidth());
@@ -99,18 +101,18 @@ $(function () {
     insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
   }
 
-  function hideHover() {
+  const hideHover = () => {
     sHover.width(0);
     insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
   }
 
-  function playFromClickedPos() {
+  const playFromClickedPos = () => {
     audio.currentTime = seekLoc;
     seekBar.width(seekT);
     hideHover();
   }
 
-  function updateCurrTime() {
+  const updateCurrTime = () => {
     nTime = new Date();
     nTime = nTime.getTime();
 
@@ -159,7 +161,7 @@ $(function () {
     }
   }
 
-  function checkBuffering() {
+  const checkBuffering = () => {
     clearInterval(buffInterval);
     buffInterval = setInterval(function () {
       if (nTime == 0 || bTime - nTime > 1000) albumArt.addClass("buffering");
@@ -170,7 +172,7 @@ $(function () {
     }, 100);
   }
 
-  function selectTrack(flag) {
+  const selectTrack = (flag) => {
     if (flag == 0 || flag == 1) ++currIndex;
     else --currIndex;
 
@@ -186,9 +188,9 @@ $(function () {
       tProgress.text("00:00");
       tTime.text("00:00");
 
-      currAlbum = albums[currIndex];
-      currTrackName = trackNames[currIndex];
-      currArtwork = albumArtworks[currIndex];
+      let currAlbum = albums[currIndex];
+      let currTrackName = trackNames[currIndex];
+      let currArtwork = albumArtworks[currIndex];
 
       audio.src = trackUrl[currIndex];
 
@@ -219,7 +221,7 @@ $(function () {
     }
   }
 
-  function initPlayer() {
+  const initPlayer = () => {
     audio = new Audio();
 
     selectTrack(0);
@@ -247,4 +249,6 @@ $(function () {
   }
 
   initPlayer();
-});
+};
+
+export { initMusicPlayer };
