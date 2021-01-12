@@ -17,13 +17,13 @@ import Timer from "./models/Timer";
   elements.next.addEventListener("click", () => stepCtrl.nextStep());
   elements.prev.addEventListener("click", () => stepCtrl.prevStep());
 
-  // stepCtrl.push(
-  //   new Command(
-  //     "Good morning love, let's make coffee together!",
-  //     10,
-  //     `<object data="./assets/morning.svg" type="image/svg+xml" class="animation-morning"></object>`
-  //   )
-  // );
+  stepCtrl.push(
+    new Command(
+      "Good morning love, let's make coffee together!",
+      10,
+      `<object data="./assets/morning.svg" type="image/svg+xml" class="animation-morning"></object>`
+    )
+  );
 
   stepCtrl.push(new Form("How should we do this?", 0, null));
 
