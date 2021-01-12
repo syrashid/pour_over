@@ -48,7 +48,7 @@ export default class Form extends Step {
   }
   formHTML() {
     return `
-    <form onsubmit="return false" class="px-4">
+    <form onsubmit="return false" class="px-16 pb-32">
     Let's make
     <span id="cups" class="input-container">
     <span class="placeholder"> ??? </span>
