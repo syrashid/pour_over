@@ -47,7 +47,7 @@ import Timer from "./models/Timer";
     new Timer(
       "Let's pour a little water for the bloom",
       35,
-      "Animation Placeholder"
+      `<object data="./assets/bloom.svg" type="image/svg+xml" class="animation-bloom"></object>`
     )
   );
 
