@@ -63,8 +63,34 @@ const initNaturalLanguageForm = (formObj) => {
     // style selected option
     siblingOptions.removeClass("selected");
     OptionInUse.addClass("selected");
-    // update form ojbect
+    // update form object
+    let prevInd;
+    if (category === 'soundtrack') prevInd = formObj.tracks.indexOf(formObj.soundtrack);
+
     eval(`formObj.${category} = '${newValue}'`);
+
+    // Special case for when the soundtrack is changed
+    if (category === 'soundtrack') {
+      var playPreviousTrackButton = $("#play-previous");
+      var playNextTrackButton = $("#play-next");
+      var playPauseButton = $("#play-pause-button");
+      const newInd = formObj.tracks.indexOf(newValue);
+      let diff = newInd - prevInd;
+
+      if (diff > 0) {
+        while (diff !== 0) {
+          playNextTrackButton.click();
+          diff--;
+        }
+      } else if (diff < 0) {
+        while (diff !== 0) {
+          playPreviousTrackButton.click();
+          diff++;
+        }
+      } else {
+        playPauseButton.click();
+      }
+    }
     // update the actual input
     selectOption.each(function () {
       var optionValue = $(this).attr("value");

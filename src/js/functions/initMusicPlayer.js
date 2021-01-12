@@ -1,8 +1,6 @@
-const initMusicPlayer = () => {
+const initMusicPlayer = (formObj) => {
 
   var playerTrack = $("#player-track"),
-    bgArtwork = $("#bg-artwork"),
-    bgArtworkUrl,
     albumName = $("#album-name"),
     trackName = $("#track-name"),
     albumArt = $("#album-art"),
@@ -30,7 +28,7 @@ const initMusicPlayer = () => {
     nTime = 0,
     buffInterval = null,
     tFlag = false,
-    albums = ["Lofi", "Acoustic", "Folk", "Jazz"],
+    albums = ["lofi", "acoustic", "folk", "jazz"],
     trackNames = [
       "Say goodbye stress",
       "Rit Dit Dit Di Doo",
@@ -183,6 +181,7 @@ const initMusicPlayer = () => {
       let currAlbum = albums[currIndex];
       let currTrackName = trackNames[currIndex];
       let currArtwork = albumArtworks[currIndex];
+      formObj.soundtrack = currAlbum;
 
       audio.src = trackUrl[currIndex];
 
@@ -204,9 +203,6 @@ const initMusicPlayer = () => {
       albumArt.find("img.active").removeClass("active");
       $("#" + currArtwork).addClass("active");
 
-      bgArtworkUrl = $("#" + currArtwork).attr("src");
-
-      bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
     } else {
       if (flag == 0 || flag == 1) --currIndex;
       else ++currIndex;

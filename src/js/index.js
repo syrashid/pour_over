@@ -28,7 +28,8 @@ import Timer from "./models/Timer";
     )
   );
 
-  stepCtrl.push(new Form("How should we do this?", 0, null));
+  const formObj = new Form("How should we do this?", 0, null);
+  stepCtrl.push(formObj);
 
   stepCtrl.push(
     new Command(
@@ -79,5 +80,5 @@ import Timer from "./models/Timer";
   );
 
   stepCtrl.start();
-  initMusicPlayer();
+  initMusicPlayer(formObj);
 }
