@@ -37,7 +37,7 @@
 
 #player-track.active
 {
-    top: -92px;
+    top: -100px;
 }
 
 #album-name
@@ -144,7 +144,7 @@
     position: relative;
     height: 100%;
     background-color: #fff;
-    box-shadow: 0 30px 80px #656565;
+    box-shadow: 4px 4px 16px $opaque-black;
     border-radius: 15px;
     z-index: 2;
 }
@@ -166,7 +166,7 @@
 #album-art.active
 {
     top: -60px;
-    box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
+    box-shadow: 4px 4px 16px $opaque-black;
 }
 
 #album-art:before
@@ -206,7 +206,7 @@
 #album-art.active img.active
 {
     z-index: 1;
-    animation: rotateAlbumArt 3s linear 0s infinite forwards;
+    animation: rotateAlbumArt 5s linear 0s infinite forwards;
 }
 
 @keyframes rotateAlbumArt

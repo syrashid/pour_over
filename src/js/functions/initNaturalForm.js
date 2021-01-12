@@ -69,7 +69,7 @@ const initNaturalLanguageForm = (formObj) => {
 
     eval(`formObj.${category} = '${newValue}'`);
 
-    // Special case for when the soundtrack is changed
+    // Special case for when the soundtrack is changed, THIS SHOULD BE AN API
     if (category === 'soundtrack') {
       var playPreviousTrackButton = $("#play-previous");
       var playNextTrackButton = $("#play-next");
