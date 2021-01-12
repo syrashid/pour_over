@@ -9,14 +9,12 @@
 }
 
 form {
-  max-width:500px;
-  margin:100px auto 0 auto;
   line-height:60px;
   color:white;
   font-size: 2.5rem;
   .input-container {
-    border-bottom:1px dashed #007a73;
-    color:#007a73;
+    border-bottom:1px dashed $red;
+    color: $red;
     padding:6px;
     margin-left:-6px;
     margin-right:-6px;
@@ -32,14 +30,15 @@ form {
       }
     }
     &:hover {
-      border-bottom:1px dashed #004f4a;
-      color:#004f4a;
+      border-bottom:1px dashed $red;
+      color: $red;
+      opacity: 0.8;
       cursor:pointer;
     }
     &.active {
       z-index:5000;
-      border-bottom:1px dashed #004f4a;
-      color:#004f4a;
+      border-bottom:1px dashed $red;
+      color: $red;
       cursor:default;
       &:before {
         content:'';
@@ -59,20 +58,20 @@ form {
     }
     .newOption {
       padding:6px 46px 6px 6px;
-      background:white;
+      background:$white;
       position:relative;
       &:hover {
-        background:#ff202f;
-        color:white;
+        background: $red;
+        color:$white;
         &:after {
-          color:white !important;
+          color:$white !important;
         }
       }
       &.selected {
         &:after {
           content:'\f00c';
           font-family:FontAwesome;
-          color:#ff202f;
+          color:$red;
           display:block;
           top:0;
           right:0;
@@ -97,57 +96,6 @@ form {
       top:0;
       left:0;
       opacity:0;
-    }
-  }
-  input,select {
-    &[type="text"]{
-      border:none;
-      outline:none;
-      margin:0;
-      padding:6px;
-      font-weight:200;
-      font-size:40px;
-      line-height:60px;
-      display:block;
-    }
-    &.hidden {
-      position:absolute;
-      left:-5000px;
-    }
-  }
-  button {
-    display:block;
-    background:white;
-    border:none;
-    padding:10px 55px 10px 20px;
-    font-size:30px;
-    font-weight:200;
-    margin:30px 0 0 0;
-    box-shadow:inset 0px 0px 0px #ff202f;
-    position:relative;
-    i {
-      transition:0s 0s ease-in-out;
-    }
-    &:after {
-      content:'\f105';
-      display:block;
-      position:absolute;
-      top:0;
-      right:0;
-      height:55px;
-      width:55px;
-      font-family:FontAwesome;
-      line-height:55px;
-      text-align:center;
-      color:#ff202f;
-    }
-    &:hover {
-      box-shadow:inset 350px 0 0 #ff202f;
-      color:white;
-      cursor:pointer;
-      &:after {
-        color:white;
-      }
     }
   }
 }
