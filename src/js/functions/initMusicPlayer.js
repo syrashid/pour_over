@@ -37,7 +37,7 @@ const initMusicPlayer = () => {
       "Basically hipster country",
       "Jazz music intensifies",
     ],
-    albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
+    albumArtworks = ["_1", "_2", "_3", "_4"],
     trackUrl = [
       "../../assets/lofi.mp3",
       "../../assets/acoustic.mp3",
