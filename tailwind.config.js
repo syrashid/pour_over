@@ -5,7 +5,16 @@ module.exports = {
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        purple: {
+          DEFAULT: '#7B77B8',
+        },
+        violet: {
+          DEFAULT: '#bd9dea',
+        },
+      }
+    },
     container: {
       center: true,
     },
