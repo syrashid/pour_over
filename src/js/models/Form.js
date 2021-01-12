@@ -70,7 +70,7 @@ export default class Form extends Step {
     </select>
     </span>
     </span>
-    roast, with a
+    roast, with a(n)
     <span id="soundtrack" class="input-container">
     <span class="placeholder"> ??? </span>
     <span class="input selectbox">
