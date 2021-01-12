@@ -22,7 +22,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Good morning love, let's make coffee together!",
+      "Good morning love, let's make coffee together",
       10,
       `<object data="./assets/morning.svg" type="image/svg+xml" class="animation-morning"></object>`
     )
