@@ -12,7 +12,7 @@ Created by potrace 1.16, written by Peter Selinger 2001-2019
   .animation-pour__path {
     stroke-dasharray: 52996;
     stroke-dashoffset: 52996;
-    animation: dash 100s linear forwards;
+    animation: dash 20s linear forwards;
   }
 
   @keyframes dash {

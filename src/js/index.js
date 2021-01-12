@@ -60,7 +60,11 @@ import Timer from "./models/Timer";
   );
 
   stepCtrl.push(
-    new Timer("And for the last bit let's give it a slight stir and wait", 30, "Animation Placeholder")
+    new Timer(
+      "And for the last bit let's give it a slight stir and wait",
+      30,
+      `<object data="./assets/stir.svg" type="image/svg+xml" class="animation-stir"></object>`
+    )
   );
 
   stepCtrl.push(
