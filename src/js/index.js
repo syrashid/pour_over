@@ -36,7 +36,11 @@ import Timer from "./models/Timer";
   );
 
   stepCtrl.push(
-    new Command("Now let's set the grounds", 0, "Animation Placeholder")
+    new Command(
+      "Now let's set the grounds",
+      0,
+      `<object data="./assets/grind.svg" type="image/svg+xml" class="animation-grind"></object>`
+    )
   );
 
   stepCtrl.push(
