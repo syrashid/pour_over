@@ -13,7 +13,7 @@ Created by potrace 1.16, written by Peter Selinger 2001-2019
   .animation-boil__path {
     stroke-dasharray: 254259;
     stroke-dashoffset: 254259;
-    animation: dash 20s linear forwards;
+    animation: dash 40s linear forwards;
   }
 
   @keyframes dash {
