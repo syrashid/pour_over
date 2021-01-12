@@ -1,18 +1,5 @@
-.seq-container {
+.container {
   height: 100vh;
-  width: 640px;
-  margin: 0 auto;
   background-color: $tan;
-  .step {
-    width: 100%;
-  }
 }
 
-
-
-@media only screen and (max-width: 640px) {
-  .seq-container {
-    width: 100vw;
-    margin: 0;
-  }
-}
