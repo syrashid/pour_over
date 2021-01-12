@@ -21,25 +21,33 @@ import Timer from "./models/Timer";
     new Command(
       "Good morning love, let's make coffee together!",
       10,
-      "Animation Placeholder"
+      `<object data="./assets/morning.svg" type="image/svg+xml" class="animation-morning"></object>`
     )
   );
 
   stepCtrl.push(new Form("How should we do this?", 0, null));
 
   stepCtrl.push(
-    new Command("Let's get the water boiling", 0, "Animation Placeholder")
+    new Command(
+      "Let's get the water boiling",
+      0,
+      `<object data="./assets/boil.svg" type="image/svg+xml" class="animation-boil"></object>`
+    )
   );
 
   stepCtrl.push(
-    new Command("Now let's set the grounds", 0, "Animation Placeholder")
+    new Command(
+      "Now let's set the grounds",
+      0,
+      `<object data="./assets/grind.svg" type="image/svg+xml" class="animation-grind"></object>`
+    )
   );
 
   stepCtrl.push(
     new Timer(
       "Let's pour a little water for the bloom",
       35,
-      "Animation Placeholder"
+      `<object data="./assets/bloom.svg" type="image/svg+xml" class="animation-bloom"></object>`
     )
   );
 
@@ -47,16 +55,24 @@ import Timer from "./models/Timer";
     new Timer(
       "Now let's pour continuously to steep",
       120,
-      "Animation Placeholder"
+      `<object data="./assets/pour.svg" type="image/svg+xml" class="animation-pour"></object>`
     )
   );
 
   stepCtrl.push(
-    new Timer("And for the last bit let's give it a slight stir and wait", 30, "Animation Placeholder")
+    new Timer(
+      "And for the last bit let's give it a slight stir and wait",
+      30,
+      `<object data="./assets/stir.svg" type="image/svg+xml" class="animation-stir"></object>`
+    )
   );
 
   stepCtrl.push(
-    new Command("Enjoy love, see you tomorrow morning", 0, "Animation Placeholder")
+    new Command(
+      "Enjoy love, see you tomorrow morning",
+      0,
+      `<object data="./assets/love.svg" type="image/svg+xml" class="animation-love"></object>`
+    )
   );
 
   stepCtrl.start();

@@ -20,6 +20,7 @@ export const updateDisplay = (command, intervals = null) => {
   elements.text.innerHTML = command.text;
   elements.timer.innerHTML = '';
   elements.animation.innerHTML = command.animation;
+  document.title = ` ❤️ Pour Over ❤️ `;
 
   if (command instanceof Form) {
     elements.animation.innerHTML = command.formHTML();
