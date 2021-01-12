@@ -4,11 +4,8 @@
 }
 
 *::selection {
-  background:#ff202f;
-  color:white;
-}
-body {
-  background-color:#04b8ad;
+  background: $red;
+  color: $white;
 }
 
 form {
@@ -16,6 +13,7 @@ form {
   margin:100px auto 0 auto;
   line-height:60px;
   color:white;
+  font-size: 2.5rem;
   .input-container {
     border-bottom:1px dashed #007a73;
     color:#007a73;

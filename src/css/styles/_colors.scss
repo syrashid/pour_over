@@ -1,7 +1,15 @@
 $tan: #ebe8e7;
 $red: #ea7186;
 $yellow: #f2c76e;
-$purple: #7a77b9;
+$purple: #7B77B8;
 $violet: #bd9dea;
 $black: #1f1f1f;
 $white: #fff;
+
+body {
+  background-color: $tan;
+}
+
+h1 {
+  color: $purple;
+}
