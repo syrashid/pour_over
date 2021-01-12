@@ -11,17 +11,19 @@
 form {
   line-height:60px;
   color:white;
+  text-shadow: 4px 4px 16px $opaque-black;
+  font-weight: 600;
   font-size: 2.5rem;
   .input-container {
-    border-bottom:1px dashed $red;
+    border-bottom:2px dashed $red;
     color: $red;
-    padding:6px;
+    padding:0 6px;
     margin-left:-6px;
     margin-right:-6px;
     display:inline-block;
     position:relative;
-    &.no-overflow {
-      max-width:100%;
+    text-shadow: none;
+    &.no-overflow {d
       .input {
         max-width:100%;
         input {
@@ -30,7 +32,7 @@ form {
       }
     }
     &:hover {
-      border-bottom:1px dashed $red;
+      border-bottom:2px dashed $red;
       color: $red;
       opacity: 0.8;
       cursor:pointer;
