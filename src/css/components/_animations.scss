@@ -1,15 +1,19 @@
-.animation-morning {
+.step__animation-container {
+  width: 100%;
+  max-width: 640px;
+  .step__animation {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.step__animation, .animation-morning {
   width: 100%;
 }
 
-.animation-boil {
-  width: 90vw;
+.animation-boil, .animation-grind {
+  width: 92%;
 }
-
-.animation-grind {
-  width: 90vw;
-}
-
 .animation-bloom {
   width: 50vw;
 }
