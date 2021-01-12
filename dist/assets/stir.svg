@@ -10,9 +10,9 @@ Created by potrace 1.16, written by Peter Selinger 2001-2019
 <style type="text/css">
 <![CDATA[
   .animation-stir__path {
-    stroke-dasharray: 52996;
-    stroke-dashoffset: 52996;
-    animation: dash 20s linear forwards;
+    stroke-dasharray: 301241;
+    stroke-dashoffset: 301241;
+    animation: dash 8s linear forwards;
   }
 
   @keyframes dash {

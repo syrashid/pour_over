@@ -68,7 +68,11 @@ import Timer from "./models/Timer";
   );
 
   stepCtrl.push(
-    new Command("Enjoy love, see you tomorrow morning", 0, "Animation Placeholder")
+    new Command(
+      "Enjoy love, see you tomorrow morning",
+      0,
+      `<object data="./assets/love.svg" type="image/svg+xml" class="animation-love"></object>`
+    )
   );
 
   stepCtrl.start();
