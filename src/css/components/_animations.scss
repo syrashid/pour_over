@@ -1,27 +1,20 @@
-.animation-morning {
-  width: 90vw;
+.step__animation-container {
+  width: 100%;
+  max-width: 640px;
+  .step__animation {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.animation-boil {
-  width: 90vw;
+.step__animation, .animation-morning{
+  width: 100%;
 }
 
-.animation-grind {
-  width: 90vw;
+.animation-boil, .animation-grind, .animation-pour, .animation-stir, .animation-love {
+  width: 92%;
 }
 
 .animation-bloom {
-  width: 50vw;
-}
-
-.animation-pour {
-  width: 90vw;
-}
-
-.animation-stir {
-  width: 90vw;
-}
-
-.animation-love {
-  width: 90vw;
+  width: 50%
 }

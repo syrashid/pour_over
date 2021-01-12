@@ -18,9 +18,10 @@ export const elements = {
 
 export const updateDisplay = (command, intervals = null) => {
   elements.text.innerHTML = command.text;
-  elements.timer.innerHTML = '';
+  elements.timer.classList.add('hidden');
   elements.animation.innerHTML = command.animation;
   document.title = ` ❤️ Pour Over ❤️ `;
+
 
   if (command instanceof Form) {
     elements.animation.innerHTML = command.formHTML();
@@ -28,6 +29,7 @@ export const updateDisplay = (command, intervals = null) => {
   }
 
   if (command instanceof Timer) {
+    elements.timer.classList.remove("hidden");
     timer(command.duration);
   }
 

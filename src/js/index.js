@@ -22,7 +22,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Good morning love, let's make coffee together!",
+      "Good morning love, let's make coffee together",
       10,
       `<object data="./assets/morning.svg" type="image/svg+xml" class="animation-morning"></object>`
     )
@@ -78,6 +78,10 @@ import Timer from "./models/Timer";
       `<object data="./assets/love.svg" type="image/svg+xml" class="animation-love"></object>`
     )
   );
+
+  // const formObj = new Form("How should we do this?", 0, null);
+  // stepCtrl.push(formObj);
+
 
   stepCtrl.start();
   initMusicPlayer(formObj);
