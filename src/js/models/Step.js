@@ -12,6 +12,10 @@ export default class Step {
     return this._text;
   }
 
+  set text(text) {
+    this._text = text;
+  }
+
   get duration() {
     return this._duration;
   }

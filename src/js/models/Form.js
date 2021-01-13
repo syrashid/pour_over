@@ -18,6 +18,7 @@ export default class Form extends Step {
     this._cups = cups;
     if (cups === 'two') {
       this._next._next._next._next.addTime(60);
+      this._next._next
     }
   }
 
