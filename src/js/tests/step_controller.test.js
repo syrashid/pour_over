@@ -80,4 +80,24 @@ test('nextStep method for StepController class, tests edges', () => {
   one = two = three = stepCtrl = null;
 });
 
-test("prevStep method for StepController class, tests edges", () => {});
+test("prevStep method for StepController class, tests edges", () => {
+    let one = new Step("Step One Text", 10, "www.sample_url.com");
+    let two = new Step("Step Two Text", 10, "www.sample_url.com");
+    let three = new Step("Step Three Text", 10, "www.sample_url.com");
+    let stepCtrl = new StepController();
+
+    stepCtrl.push(one);
+    stepCtrl.push(two);
+    stepCtrl.push(three);
+    stepCtrl.start();
+    stepCtrl.nextStep();
+    stepCtrl.nextStep();
+    stepCtrl.prevStep();
+    stepCtrl.prevStep();
+
+    expect(stepView.enableNext).toBeCalled();
+    expect(stepCtrl._active).toBe(one);
+    expect(stepView.disablePrev).toBeCalled();
+
+    one = two = three = stepCtrl = null;
+});
