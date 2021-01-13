@@ -14,3 +14,9 @@ test("base getter and setter methods for Form class", () => {
 
   formObj = null;
 });
+
+test("formHTML for Form class should return a string with a form tag", () => {
+  let formObj = new Form("Sample Text for a Form", 0, "url_path");
+
+  expect(formObj.formHTML()).toEqual(expect.stringContaining('<form'));
+});
