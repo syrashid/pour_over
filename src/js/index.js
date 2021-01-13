@@ -22,7 +22,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Good morning love, let's make coffee together",
+      "Good morning love, let's make coffee together again",
       10,
       `<object data="./assets/morning.svg" type="image/svg+xml" class="animation-morning"></object>`
     )
@@ -33,7 +33,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Let's get the water boiling",
+      "First, let's get the water boiling",
       0,
       `<object data="./assets/boil.svg" type="image/svg+xml" class="animation-boil"></object>`
     )
@@ -41,7 +41,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Now let's set the grounds",
+      "Now let's grind the beans and set the grounds (~15g)",
       0,
       `<object data="./assets/grind.svg" type="image/svg+xml" class="animation-grind"></object>`
     )
@@ -49,7 +49,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Timer(
-      "Let's pour a little water for the bloom",
+      "Pour a little water and wait, just enough to wet the grounds",
       35,
       `<object data="./assets/bloom.svg" type="image/svg+xml" class="animation-bloom"></object>`
     )
@@ -57,7 +57,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Timer(
-      "Now let's pour continuously to steep",
+      "Now pour non-stop in circular pattern to steep, keep water level",
       120,
       `<object data="./assets/pour.svg" type="image/svg+xml" class="animation-pour"></object>`
     )
@@ -65,7 +65,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Timer(
-      "And for the last bit let's give it a slight stir and wait",
+      "For the last bit give it a slight stir and let the grounds drain",
       30,
       `<object data="./assets/stir.svg" type="image/svg+xml" class="animation-stir"></object>`
     )
@@ -73,15 +73,11 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Enjoy love, see you tomorrow morning",
+      "Enjoy love, see you tomorrow morning.  I miss you",
       0,
       `<object data="./assets/love.svg" type="image/svg+xml" class="animation-love"></object>`
     )
   );
-
-  // const formObj = new Form("How should we do this?", 0, null);
-  // stepCtrl.push(formObj);
-
 
   stepCtrl.start();
   initMusicPlayer(formObj);

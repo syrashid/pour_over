@@ -11,8 +11,12 @@
   width: 100%;
 }
 
-.animation-boil, .animation-grind, .animation-pour, .animation-stir, .animation-love {
+.animation-boil, .animation-stir, .animation-love {
   width: 92%;
+}
+
+.animation-grind, .animation-pour {
+  width: 72%;
 }
 
 .animation-bloom {
