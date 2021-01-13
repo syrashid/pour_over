@@ -33,7 +33,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Let's get the water boiling",
+      "First, let's get the water boiling",
       0,
       `<object data="./assets/boil.svg" type="image/svg+xml" class="animation-boil"></object>`
     )
@@ -41,7 +41,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Now let's set the grounds",
+      "Now let's grind the beans and set the grounds (~15g)",
       0,
       `<object data="./assets/grind.svg" type="image/svg+xml" class="animation-grind"></object>`
     )
@@ -49,7 +49,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Timer(
-      "Let's pour a little water for the bloom",
+      "Pour a little water and wait, just enough to wet the grounds",
       35,
       `<object data="./assets/bloom.svg" type="image/svg+xml" class="animation-bloom"></object>`
     )
