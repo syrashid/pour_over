@@ -41,7 +41,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Now let's grind the beans and set the grounds (~15g)",
+      `Now let's grind the beans and set the grounds (~${formObj.cups === "two" ? "30" : "15"}g)`,
       0,
       `<object data="./assets/grind.svg" type="image/svg+xml" class="animation-grind"></object>`
     )
