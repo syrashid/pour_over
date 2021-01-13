@@ -51,7 +51,7 @@ export default class Form extends Step {
     <form onsubmit="return false" class="sm:px-16 sm:pb-32 px-2">
     Let's make
     <span id="cups" class="input-container">
-    <span class="placeholder"> ??? </span>
+    <span class="placeholder"> ${this._cups ? this._cups : "???"} </span>
     <span class="input selectbox">
     <select class="fancy-select hidden" name="cups">
     <option value="one">one</option>
@@ -61,7 +61,7 @@ export default class Form extends Step {
     </span>
     cup(s) of coffee, using a
     <span id="roast" class="input-container">
-    <span class="placeholder"> ??? </span>
+    <span class="placeholder"> ${this._roast ? this._roast : "???"} </span>
     <span class="input selectbox">
     <select name="roast" class="fancy-select hidden">
     <option value="light">light</option>
@@ -72,7 +72,7 @@ export default class Form extends Step {
     </span>
     roast, with a(n)
     <span id="soundtrack" class="input-container">
-    <span class="placeholder"> ??? </span>
+    <span class="placeholder"> ${this._soundtrack ? this._soundtrack : "???"} </span>
     <span class="input selectbox">
     <select name="soundtrack" class="fancy-select hidden">
     <option value="lofi">lofi</option>
