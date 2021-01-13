@@ -58,7 +58,7 @@ import Timer from "./models/Timer";
   stepCtrl.push(
     new Timer(
       "Now pour non-stop in circular pattern to steep, keep water level",
-      120,
+      90,
       `<object data="./assets/pour.svg" type="image/svg+xml" class="animation-pour"></object>`
     )
   );
@@ -66,7 +66,7 @@ import Timer from "./models/Timer";
   stepCtrl.push(
     new Timer(
       "For the last bit give it a slight stir and let the grounds drain",
-      30,
+      45,
       `<object data="./assets/stir.svg" type="image/svg+xml" class="animation-stir"></object>`
     )
   );
