@@ -10,7 +10,7 @@ test("base getter and setter methods for Form class", () => {
   expect(formObj.cups).toBe("one");
   expect(formObj.roast).toBe("dark");
   expect(formObj.soundtrack).toBe("lofi");
-
+  expect(formObj.tracks).toEqual(["lofi", "acoustic", "folk", "jazz"]);
 
   formObj = null;
 });

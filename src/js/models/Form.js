@@ -7,7 +7,7 @@ export default class Form extends Step {
     this._cups = null;
     this._roast = null;
     this._soundtrack = null;
-    this._tracks = ['lofi', 'acoustic', 'folk', 'jazz']
+    this._tracks = ["lofi", "acoustic", "folk", "jazz"];
   }
 
   get cups() {
@@ -16,7 +16,7 @@ export default class Form extends Step {
 
   set cups(cups) {
     this._cups = cups;
-    if (cups === 'two') {
+    if (cups === "two") {
       this._next._next._next._next.addTime(45);
       this._next._next.text = `Now let's grind the beans and set the grounds (~30g)`;
     }
