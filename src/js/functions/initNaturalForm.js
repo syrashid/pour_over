@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const initNaturalLanguageForm = (formObj) => {
   // show and hide styled inputs, update natural language statement
   $(".input-container").click(function () {
