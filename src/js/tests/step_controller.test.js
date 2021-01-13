@@ -55,6 +55,7 @@ test('start method for StepController class', () => {
   stepCtrl.start();
 
   expect(stepView.updateDisplay).toBeCalled();
+  expect(stepCtrl._active).toBe(one);
 
   one = stepCtrl = null;
 });
