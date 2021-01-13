@@ -17,7 +17,7 @@ export default class Form extends Step {
   set cups(cups) {
     this._cups = cups;
     if (cups === 'two') {
-      this._next._next._next._next.addTime(60);
+      this._next._next._next._next.addTime(45);
       this._next._next.text = `Now let's grind the beans and set the grounds (~30g)`;
     }
   }
@@ -29,9 +29,9 @@ export default class Form extends Step {
   set roast(roast) {
     this._roast = roast;
     if (roast === "medium") {
-      this._next._next._next._next.addTime(30);
+      this._next._next._next._next.addTime(20);
     } else if (roast === "light") {
-      this._next._next._next._next.addTime(60);
+      this._next._next._next._next.addTime(45);
     }
   }
 
