@@ -47,6 +47,7 @@ export default class Form extends Step {
   get tracks() {
     return this._tracks;
   }
+
   formHTML() {
     return `
     <form onsubmit="return false" class="sm:px-16 sm:pb-32 pb-24 px-2 sm:text-4xl text-2xl ">
