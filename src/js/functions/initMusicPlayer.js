@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const initMusicPlayer = (formObj) => {
 
   var playerTrack = $("#player-track"),

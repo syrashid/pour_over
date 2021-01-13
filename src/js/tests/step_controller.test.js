@@ -1,6 +1,7 @@
 import Step from '../models/Step';
 import StepController from '../step_controller';
-
+import * as stepView from "../views/stepView";
+jest.mock("../views/stepView");
 
 test('push for StepController class', () => {
   let one = new Step("Step One Text", 10, "www.sample_url.com");
@@ -46,4 +47,57 @@ test('length getter for StepController class', () => {
   one = two = three = stepCtrl = null;
 });
 
+test('start method for StepController class', () => {
+  let one = new Step("Step One Text", 10, "www.sample_url.com");
+  let stepCtrl = new StepController();
 
+  stepCtrl.push(one);
+  stepCtrl.start();
+
+  expect(stepView.updateDisplay).toBeCalled();
+  expect(stepCtrl._active).toBe(one);
+
+  one = stepCtrl = null;
+});
+
+test('nextStep method for StepController class, tests edges', () => {
+  let one = new Step("Step One Text", 10, "www.sample_url.com");
+  let two = new Step("Step Two Text", 10, "www.sample_url.com");
+  let three = new Step("Step Three Text", 10, "www.sample_url.com");
+  let stepCtrl = new StepController();
+
+  stepCtrl.push(one);
+  stepCtrl.push(two);
+  stepCtrl.push(three);
+  stepCtrl.start();
+  stepCtrl.nextStep();
+  stepCtrl.nextStep();
+
+  expect(stepView.enablePrev).toBeCalled();
+  expect(stepCtrl._active).toBe(three);
+  expect(stepView.disableNext).toBeCalled();
+
+  one = two = three = stepCtrl = null;
+});
+
+test("prevStep method for StepController class, tests edges", () => {
+    let one = new Step("Step One Text", 10, "www.sample_url.com");
+    let two = new Step("Step Two Text", 10, "www.sample_url.com");
+    let three = new Step("Step Three Text", 10, "www.sample_url.com");
+    let stepCtrl = new StepController();
+
+    stepCtrl.push(one);
+    stepCtrl.push(two);
+    stepCtrl.push(three);
+    stepCtrl.start();
+    stepCtrl.nextStep();
+    stepCtrl.nextStep();
+    stepCtrl.prevStep();
+    stepCtrl.prevStep();
+
+    expect(stepView.enableNext).toBeCalled();
+    expect(stepCtrl._active).toBe(one);
+    expect(stepView.disablePrev).toBeCalled();
+
+    one = two = three = stepCtrl = null;
+});
