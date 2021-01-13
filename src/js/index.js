@@ -57,7 +57,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Timer(
-      "Now let's pour continuously to steep",
+      "Now pour non-stop in circular pattern to steep, keep water level",
       120,
       `<object data="./assets/pour.svg" type="image/svg+xml" class="animation-pour"></object>`
     )
@@ -65,7 +65,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Timer(
-      "And for the last bit let's give it a slight stir and wait",
+      "For the last bit give it a slight stir and let the grounds drain",
       30,
       `<object data="./assets/stir.svg" type="image/svg+xml" class="animation-stir"></object>`
     )
@@ -73,7 +73,7 @@ import Timer from "./models/Timer";
 
   stepCtrl.push(
     new Command(
-      "Enjoy love, see you tomorrow morning",
+      "Enjoy love, see you tomorrow morning.  I miss you",
       0,
       `<object data="./assets/love.svg" type="image/svg+xml" class="animation-love"></object>`
     )
