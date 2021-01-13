@@ -79,10 +79,6 @@ import Timer from "./models/Timer";
     )
   );
 
-  // const formObj = new Form("How should we do this?", 0, null);
-  // stepCtrl.push(formObj);
-
-
   stepCtrl.start();
   initMusicPlayer(formObj);
 }
