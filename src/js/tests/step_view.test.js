@@ -53,3 +53,31 @@ test('enablePrev function for stepView module', () => {
   expect(elements.prev.classList.contains('hidden')).toBeFalsy();
   expect(elements.prevDisabled.classList.contains("hidden")).toBeTruthy();
 });
+
+test("disablePrev function for stepView module", () => {
+  document.body.innerHTML = `
+    <div class="navigation-btns flex">
+      <button class="sm:text-3xl text-2xl step__btn--prev-disabled bg-violet text-white font-bold py-3 px-4 opacity-50 cursor-not-allowed w-full  hidden">
+        <i class="fas fa-backward"></i> Prev
+      </button>
+      <button class="sm:text-3xl text-2xl step__btn--prev bg-violet hover:opacity-50 text-white font-bold py-3 px-4 w-full">
+        <i class="fas fa-backward"></i> Prev
+      </button>
+      <button class="sm:text-3xl text-2xl step__btn--next bg-purple hover:opacity-50 text-white font-bold py-3 px-4 w-full">
+        Next &nbsp<i class="fas fa-forward"></i>
+      </button>
+      <button class="sm:text-3xl text-2xl step__btn--next-disabled bg-purple text-white font-bold py-3 px-4 opacity-50 w-full cursor-not-allowed hidden">
+        Next &nbsp<i class="fas fa-forward"></i>
+      </button>
+    </div>
+  `;
+  elements.next = document.querySelector(".step__btn--next");
+  elements.nextDisabled = document.querySelector(".step__btn--next-disabled");
+  elements.prev = document.querySelector(".step__btn--prev");
+  elements.prevDisabled = document.querySelector(".step__btn--prev-disabled");
+
+  stepView.disablePrev();
+
+  expect(elements.prev.classList.contains("hidden")).toBeTruthy();
+  expect(elements.prevDisabled.classList.contains("hidden")).toBeFalsy();
+});
