@@ -39,7 +39,7 @@ export default class Form extends Step {
   }
 
   set soundtrack(soundtrack) {
-    // In an ideal world there should be some api between the form and the music player
+    // NOTE: In an ideal world there should be some api between the form and the music player
     this._soundtrack = soundtrack;
   }
 
